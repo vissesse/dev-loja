@@ -1,0 +1,32 @@
+{% extends 'app_loja/base/base.html' %}
+<!---->
+
+{% block title %} Carregar arquivo {% endblock %}
+<!---->
+{% load widget_tweaks %}
+
+<!---->
+
+{% block cabecalho %}
+<h2>Carregar arquivo</h2>
+{% endblock %}
+
+
+{% block page_content %}
+
+{% if form.errors %}
+<h4>Erro ao carregar o arquivo</h4>
+{% endif %}
+
+<form method="post" enctype="multipart/form-data">{% csrf_token %}
+
+    <span class="erro"> {{ form.titulo.errors }}</span>
+    {% render_field form.titulo class+="input" name='titulo' %}
+
+    <span class="erro"> {{ form.arquivo.errors }}</span>
+    {% render_field form.arquivo  name='arquivo' %}
+    <!--botao de envio-->
+    <button class="btn">Enviar</button>
+
+</form>
+{% endblock %}

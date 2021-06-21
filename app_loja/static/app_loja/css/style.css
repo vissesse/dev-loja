@@ -1,0 +1,78 @@
+
+  body {
+    font: 12pt, "Myriad Pro", Frutiger, "Lucida Grande", "Lucida Sans", "Lucida Sans Unicode", Verdana, sans-serif;
+    background-color: rgb(255, 255, 255);
+}
+
+.container{
+    display: block;
+   margin-left: 20%;
+}
+.title{
+    margin-left: 10%;
+}
+
+
+.head{
+    padding: 10px 30px auto 10px;
+}
+
+h4, .head{
+  color: rgb(75, 113, 113);
+
+}
+
+
+.erro{
+    background-color: red;
+}
+
+.btn{
+    background-color: #0abcd3;
+    color: #ffffff;
+    margin: 0px 20px 0px 0px;
+    border-style: none;
+    font-weight: 700;
+    height: 30px;
+    width: 250px;
+    border-radius: 2px;
+}
+
+
+
+
+  table {
+    border-collapse: collapse;
+    width: 65em;
+    border: 1px solid #666;
+    font-size: 12pt;
+  }
+  thead {
+    font-size: 14pt;
+    background: #ccc left center;
+    border-top: 1px solid #a5a5a5;
+    border-bottom: 1px solid #a5a5a5;
+  }
+  tr:hover {
+    background-color:#cecece;
+    color: #fff;
+  }
+  thead tr:hover {
+    background-color: transparent;
+    color: inherit;
+  }
+  tr:nth-child(even) {
+      background-color: #edf5ff;
+  }
+  th {
+    font-weight: normal;
+    text-align: left;
+  }
+  th, td {
+    padding: 0.1em 1em;
+  }
+
+  .total{
+      margin-left: 55em;
+
+  }

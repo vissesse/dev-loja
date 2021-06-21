@@ -1,0 +1,46 @@
+{% extends 'app_loja/base/base.html' %}
+<!---->
+
+{% block title %} Lojas-tranzações {% endblock %}
+<!---->
+{% load primeira_letra %}
+<!---->
+{% block page_content %}
+
+
+<h4><strong>{{ loja.nome_loja }} </strong> tabela de Tranzacoes</h4>
+
+<table>
+    <legend>Responssavel <strong>{{ loja.dono_loja }}</strong> </legend>
+    <thead>
+        <tr>
+            <th scope="col">descricao</th>
+            <th scope="col">hora </th>
+            <th scope="col">data </th>
+            <th scope="col">cpf </th>
+            <th scope="col">cartão </th>
+            <th scope="col">natureza</th>
+            <th scope="col">valor$</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for tranzacao in tranzacoes %}
+        <tr>
+            <td>{{ tranzacao.descricao }}</td>
+            <td>{{ tranzacao.hora }}</td>
+            <td>{{ tranzacao.data }}</td>
+            <td>{{ tranzacao.cpf }}</td>
+            <td>{{ tranzacao.cartao }}</td>
+            <td>{{ tranzacao.natureza }}</td>
+            <td>{{ tranzacao.valor }}</td>
+
+        </tr>
+        {% endfor %}
+        <tr>
+        </tr>
+    </tbody>
+</table>
+<hr>
+<label class="total" style="color: darkkhaki;"> <STROng> Total de saldo:{{ saldo_total }}$ </STROng></label>
+
+{% endblock %}

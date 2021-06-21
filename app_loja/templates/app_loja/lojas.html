@@ -1,0 +1,35 @@
+{% extends 'app_loja/base/base.html' %}
+<!---->
+
+{% block title %} Lojas {% endblock %}
+<!---->
+{% load primeira_letra %}
+<!---->
+
+{% block page_content %}
+<h4><strong>Lojas </strong> no banco</h4>
+<table>
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome da loja</th>
+            <th scope="col">Dono da loja </th>
+            <th scope="col">Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for loja in lojas %}
+        <tr>
+            <th scope="row">{{ loja.nome_loja|primeira_letra }}</th>
+            <td>  {{ loja.nome_loja }}</td>
+            <td>{{ loja.dono_loja }}</td>
+            <td>
+                <a href="{% url 'app_loja:loja_trazacoes' pk=loja.id %}" class="">
+                    trazacoes
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
